@@ -8,6 +8,39 @@ import 'antd/dist/antd.css';
 import { listNotes } from './graphql/queries';
 
 function App() {
+
+  const initialState = {
+    notes: []
+    , loading: true
+    , error: false
+    , form: {
+        name: ''
+        , description: ''
+    }
+  };
+
+  const reducer = (state, action) => {
+
+    switch(action.type) {
+      case 'SET_NOTES': 
+        return {
+          ...state
+          , notes: action.notes
+          , loading: false
+        };
+      case 'ERROR':
+        return {
+          ...state
+          , loading: false
+          , error: true
+        };
+      default:
+        return { 
+          ...state 
+        };
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
