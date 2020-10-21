@@ -7,7 +7,7 @@ import { List } from 'antd';
 import 'antd/dist/antd.css';
 import { listNotes } from './graphql/queries';
 
-function App() {
+const App = () => {
 
   const initialState = {
     notes: []
@@ -50,6 +50,8 @@ function App() {
         query: listNotes
       });
       
+      console.log(notesData);
+      
       dispatch({
         type: 'SET_NOTES'
         , notes: notesData.data.listNotes.items
@@ -72,7 +74,7 @@ function App() {
   );
 
   const styles = {
-    container: {padding: 20},
+    container: { padding: new Date().getSeconds() % 2 == 0 ? 20 : 200 },
     input: {marginBottom: 10},
     item: { textAlign: 'left' },
     p: { color: '#1890ff' }
