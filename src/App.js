@@ -143,6 +143,14 @@ const App = () => {
 
   }
 
+  const onChange = (e) => {
+    dispatch({
+      type: 'SET_INPUT'
+      , name: e.target.name
+      , value: e.target.value
+    });
+  }
+
   useEffect(
     () => {
       fetchNotes();
@@ -151,7 +159,8 @@ const App = () => {
   );
 
   const styles = {
-    container: { padding: new Date().getSeconds() % 2 == 0 ? 20 : 200 },
+    //container: { padding: new Date().getSeconds() % 2 == 0 ? 20 : 200 },
+    container: { padding: 20 },
     input: {marginBottom: 10},
     item: { textAlign: 'left' },
     p: { color: '#1890ff' }
@@ -174,6 +183,26 @@ const App = () => {
     <div
       style={styles.container}
     >
+      <Input 
+        placeholder='Note Name'
+        style={styles.input}
+        name='name'
+        onChange={onChange}
+        value={state.form.name}
+      />
+      <Input 
+        placeholder='Note Description'
+        style={styles.input}
+        name='description'
+        onChange={onChange}
+        value={state.form.description}
+      />
+      <Button
+        type='primary'
+        onClick={createNote}
+      >
+        Create New Note
+      </Button>
       <List 
         loading={state.loading}
         dataSource={state.notes}
