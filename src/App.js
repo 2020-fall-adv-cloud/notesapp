@@ -237,12 +237,12 @@ const App = () => {
               style={styles.p} 
               onClick={() => updateNote(item)}
             >
-              {item.completed ? 'Completed' : 'Mark Completed'}
+              {item.completed ? 'Mark Incomplete' : 'Mark Complete'}
           </p>
         ]}
       >
         <List.Item.Meta
-          title={item.name}
+          title={ item.completed ? item.name + ' (complete)' : item.name }
           description={item.description}
         />
       </List.Item>
