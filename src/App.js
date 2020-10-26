@@ -154,18 +154,13 @@ const App = () => {
     });
   }
 
-  const deleteNote = async ({ id }) => {
+  const deleteNote = async (noteToDelete) => {
 
-    const index = state.notes.findIndex(n => n.id === id);
-    
-    const notes = [
-      ...state.notes.slice(0, index)
-      , ...state.notes.slice(index + 1)
-    ];
+    console.log(noteToDelete);
     
     dispatch({ 
       type: 'SET_NOTES'
-      , notes 
+      , notes: state.notes.filter(x => x !== noteToDelete)
     });
     
     try {
@@ -173,7 +168,7 @@ const App = () => {
         query: DeleteNote,
         variables: { 
           input: { 
-            id 
+            id: noteToDelete.id 
           } 
         }
       })
