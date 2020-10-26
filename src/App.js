@@ -8,7 +8,10 @@ import 'antd/dist/antd.css';
 import { listNotes } from './graphql/queries';
 
 import { v4 as uuid } from 'uuid';
-import { createNote as CreateNote } from './graphql/mutations';
+import { 
+  createNote as CreateNote
+  , deleteNote as DeleteNote 
+} from './graphql/mutations';
 
 const App = () => {
 
@@ -151,6 +154,37 @@ const App = () => {
     });
   }
 
+  const deleteNote = async ({ id }) => {
+
+    const index = state.notes.findIndex(n => n.id === id);
+    
+    const notes = [
+      ...state.notes.slice(0, index)
+      , ...state.notes.slice(index + 1)
+    ];
+    
+    dispatch({ 
+      type: 'SET_NOTES'
+      , notes 
+    });
+    
+    try {
+      await API.graphql({
+        query: DeleteNote,
+        variables: { 
+          input: { 
+            id 
+          } 
+        }
+      })
+      
+      console.log('successfully deleted note!')
+      
+    } catch (err) {
+        console.error({ err })
+    }
+  }
+
   useEffect(
     () => {
       fetchNotes();
@@ -170,6 +204,13 @@ const App = () => {
     return (
       <List.Item
         style={styles.item}
+        actions={[
+          <p 
+            style={styles.p} 
+            onClick={() => deleteNote(item)}>
+              Delete
+          </p>
+        ]}
       >
         <List.Item.Meta
           title={item.name}
