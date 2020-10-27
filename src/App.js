@@ -71,6 +71,14 @@ const App = () => {
           }
         };
 
+      case 'ADD_EXCLAMATION':
+        return {
+          ...state
+          , notes: state.notes.map(x => ({
+            ...x
+            , name: action.note == x ? x.name + '!' : x.name
+          }))
+        };
       default:
         return { 
           ...state 
@@ -208,6 +216,12 @@ const App = () => {
     }
   }
 
+  const addExclamation = (note) => {
+    dispatch({
+      type: 'ADD_EXCLAMATION'
+      , note: note
+    });
+  }
   useEffect(
     () => {
       fetchNotes();
@@ -238,6 +252,12 @@ const App = () => {
               onClick={() => updateNote(item)}
             >
               {item.completed ? 'Mark Incomplete' : 'Mark Complete'}
+          </p>
+          , <p
+            style={styles.p}
+            onClick={() => addExclamation(item)}
+          >
+            + !
           </p>
         ]}
       >
