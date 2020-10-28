@@ -293,6 +293,11 @@ const App = () => {
       >
         Create New Note
       </Button>
+      <hr/>
+      <h3>
+        { state.notes.filter(x => x.completed).length } completed / { state.notes.length } total 
+      </h3> 
+      <hr/>
       <List 
         loading={state.loading}
         dataSource={state.notes}
