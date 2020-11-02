@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/noteapp/static/css/main.5f361e03.chunk.css",
-    "main.js": "/noteapp/static/js/main.e8464fa5.chunk.js",
-    "main.js.map": "/noteapp/static/js/main.e8464fa5.chunk.js.map",
-    "runtime-main.js": "/noteapp/static/js/runtime-main.6d57e6ed.js",
-    "runtime-main.js.map": "/noteapp/static/js/runtime-main.6d57e6ed.js.map",
-    "static/css/2.e10332d9.chunk.css": "/noteapp/static/css/2.e10332d9.chunk.css",
-    "static/js/2.13bf3f25.chunk.js": "/noteapp/static/js/2.13bf3f25.chunk.js",
-    "static/js/2.13bf3f25.chunk.js.map": "/noteapp/static/js/2.13bf3f25.chunk.js.map",
-    "index.html": "/noteapp/index.html",
-    "precache-manifest.82c74611e5f9e632513b443bd39432b2.js": "/noteapp/precache-manifest.82c74611e5f9e632513b443bd39432b2.js",
-    "service-worker.js": "/noteapp/service-worker.js",
-    "static/css/2.e10332d9.chunk.css.map": "/noteapp/static/css/2.e10332d9.chunk.css.map",
-    "static/css/main.5f361e03.chunk.css.map": "/noteapp/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.13bf3f25.chunk.js.LICENSE.txt": "/noteapp/static/js/2.13bf3f25.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/noteapp/static/media/logo.5d5d9eef.svg"
+    "main.css": "/notesapp/static/css/main.5f361e03.chunk.css",
+    "main.js": "/notesapp/static/js/main.f01838fa.chunk.js",
+    "main.js.map": "/notesapp/static/js/main.f01838fa.chunk.js.map",
+    "runtime-main.js": "/notesapp/static/js/runtime-main.d30671ec.js",
+    "runtime-main.js.map": "/notesapp/static/js/runtime-main.d30671ec.js.map",
+    "static/css/2.e10332d9.chunk.css": "/notesapp/static/css/2.e10332d9.chunk.css",
+    "static/js/2.13bf3f25.chunk.js": "/notesapp/static/js/2.13bf3f25.chunk.js",
+    "static/js/2.13bf3f25.chunk.js.map": "/notesapp/static/js/2.13bf3f25.chunk.js.map",
+    "index.html": "/notesapp/index.html",
+    "precache-manifest.df1468ab421e00d1425c88db32d42482.js": "/notesapp/precache-manifest.df1468ab421e00d1425c88db32d42482.js",
+    "service-worker.js": "/notesapp/service-worker.js",
+    "static/css/2.e10332d9.chunk.css.map": "/notesapp/static/css/2.e10332d9.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "/notesapp/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.13bf3f25.chunk.js.LICENSE.txt": "/notesapp/static/js/2.13bf3f25.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/notesapp/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6d57e6ed.js",
+    "static/js/runtime-main.d30671ec.js",
     "static/css/2.e10332d9.chunk.css",
     "static/js/2.13bf3f25.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.e8464fa5.chunk.js"
+    "static/js/main.f01838fa.chunk.js"
   ]
 }
