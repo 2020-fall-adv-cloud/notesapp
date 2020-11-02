@@ -2,7 +2,7 @@
   "name": "notesapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://2020-fall-adv-cloud.github.io/noteapp/",
+  "homepage": "https://2020-fall-adv-cloud.github.io/noteapp",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
